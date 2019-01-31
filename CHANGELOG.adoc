@@ -23,6 +23,11 @@ title: Changelog
 
 * The support for the embedded Elasticsearch will be dropped in the future. It is highly recommended to link:{{< relref "elasticsearch.asciidoc" >}}#_dedicated_elasticsearch[setup Elasticsearch as a dedicated service].
 
+[[v0.29.6]]
+== 0.29.6 (TBD)
+
+icon:check[] Clustering: The mesh version will no longer be appended  to the node name used for OrientDB clustering. It is recommended to sanitize the `data/graphdb/storage/distributed-db-config.json` file and remove/rename entries which reference older mesh nodes. Only the active nodes should be listed in the file.
+
 [[v0.29.5]]
 == 0.29.5 (31.01.2019)
 
