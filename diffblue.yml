@@ -61,55 +61,185 @@ units:
       sourceDir: test-common/src/main/java
       sourceFile: com/gentics/mesh/core/node/ElementEntry.java
   - target:
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/endpoint/admin/consistency/check/GraphFieldContainerCheck.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/endpoint/admin/consistency/check/GraphFieldContainerCheck.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/container/impl/NodeGraphFieldContainerImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/container/impl/NodeGraphFieldContainerImpl.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/impl/GraphFieldContainerEdgeImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/impl/GraphFieldContainerEdgeImpl.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/endpoint/admin/consistency/AbstractConsistencyCheck.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/endpoint/admin/consistency/AbstractConsistencyCheck.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/endpoint/admin/consistency/ConsistencyCheckResult.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/endpoint/admin/consistency/ConsistencyCheckResult.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/endpoint/admin/consistency/repair/NodeDeletionGraphFieldContainerFix.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/endpoint/admin/consistency/repair/NodeDeletionGraphFieldContainerFix.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/core/rest/admin/consistency/InconsistencyInfo.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/core/rest/admin/consistency/InconsistencyInfo.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/core/rest/admin/consistency/RepairAction.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/core/rest/admin/consistency/RepairAction.java
-    # Child of GraphFieldContainerCheck.class
+    - dir: elasticsearch/target/classes
+      file: com/gentics/mesh/search/index/node/NodeContainerTransformer.class
+      sourceDir: elasticsearch/src/main/java
+      sourceFile: com/gentics/mesh/search/index/node/NodeContainerTransformer.java
+    # Child of NodeContainerTransformer.class
     - dir: common/target/classes
-      file: com/gentics/mesh/graphdb/spi/Database.class
+      file: com/gentics/mesh/core/data/ContainerType.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/graphdb/spi/Database.java
-    # Child of GraphFieldContainerCheck.class
-    - dir: api/target/classes
-      file: com/gentics/mesh/util/VersionNumber.class
-      sourceDir: api/src/main/java
-      sourceFile: com/gentics/mesh/util/VersionNumber.java
+      sourceFile: com/gentics/mesh/core/data/ContainerType.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/GraphFieldContainer.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/GraphFieldContainer.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/NodeGraphFieldContainer.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/NodeGraphFieldContainer.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/Project.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/Project.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/Role.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/Role.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/Tag.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/Tag.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/TagFamily.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/TagFamily.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/binary/Binary.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/binary/Binary.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/Micronode.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/Micronode.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/Node.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/Node.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/BinaryGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/BinaryGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/BooleanGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/BooleanGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/DateGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/DateGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/HtmlGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/HtmlGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/NumberGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/NumberGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/StringGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/StringGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/list/BooleanGraphFieldList.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/list/BooleanGraphFieldList.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/list/DateGraphFieldList.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/list/DateGraphFieldList.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/list/HtmlGraphFieldList.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/list/HtmlGraphFieldList.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/list/MicronodeGraphFieldList.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/list/MicronodeGraphFieldList.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/list/NodeGraphFieldList.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/list/NodeGraphFieldList.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/list/NumberGraphFieldList.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/list/NumberGraphFieldList.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/list/StringGraphFieldList.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/list/StringGraphFieldList.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/nesting/MicronodeGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/nesting/MicronodeGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/node/field/nesting/NodeGraphField.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/node/field/nesting/NodeGraphField.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/schema/MicroschemaContainerVersion.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/schema/MicroschemaContainerVersion.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/schema/SchemaContainerVersion.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/schema/SchemaContainerVersion.java
+    # Child of NodeContainerTransformer.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/common/FieldTypes.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/common/FieldTypes.java
+    # Child of NodeContainerTransformer.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/node/field/binary/BinaryMetadata.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/node/field/binary/BinaryMetadata.java
+    # Child of NodeContainerTransformer.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/node/field/binary/Location.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/node/field/binary/Location.java
+    # Child of NodeContainerTransformer.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/schema/FieldSchema.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/schema/FieldSchema.java
+    # Child of NodeContainerTransformer.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/schema/impl/ListFieldSchemaImpl.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/schema/impl/ListFieldSchemaImpl.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/search/SearchProvider.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/search/SearchProvider.java
+    # Child of NodeContainerTransformer.class
+    - dir: elasticsearch/target/classes
+      file: com/gentics/mesh/search/index/AbstractTransformer.class
+      sourceDir: elasticsearch/src/main/java
+      sourceFile: com/gentics/mesh/search/index/AbstractTransformer.java
+    # Child of NodeContainerTransformer.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/util/ETag.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/util/ETag.java
   - target:
     - dir: rest-model/target/classes
       file: com/gentics/mesh/core/rest/schema/change/impl/SchemaChangeOperation.class
@@ -146,160 +276,15 @@ units:
       sourceDir: verticles/graphql/src/main/java
       sourceFile: com/gentics/mesh/graphql/type/AbstractTypeProvider.java
   - target:
-    - dir: core/target/classes
-      file: com/gentics/mesh/changelog/highlevel/HighLevelChangelogSystem.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/changelog/highlevel/HighLevelChangelogSystem.java
-    # Child of HighLevelChangelogSystem.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/changelog/HighLevelChange.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/changelog/HighLevelChange.java
-    # Child of HighLevelChangelogSystem.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/MeshRoot.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/MeshRoot.java
-  - target:
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/endpoint/admin/consistency/check/SchemaContainerCheck.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/endpoint/admin/consistency/check/SchemaContainerCheck.java
-    # Child of SchemaContainerCheck.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/MeshVertex.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/MeshVertex.java
-    # Child of SchemaContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/root/impl/SchemaContainerRootImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/impl/SchemaContainerRootImpl.java
-    # Child of SchemaContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/schema/impl/SchemaContainerImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/schema/impl/SchemaContainerImpl.java
-    # Child of SchemaContainerCheck.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/schema/impl/SchemaContainerVersionImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/schema/impl/SchemaContainerVersionImpl.java
-  - target:
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/endpoint/schema/SchemaCrudHandler.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/endpoint/schema/SchemaCrudHandler.java
-    # Child of SchemaCrudHandler.class
-    - dir: api/target/classes
-      file: com/gentics/mesh/Events.class
-      sourceDir: api/src/main/java
-      sourceFile: com/gentics/mesh/Events.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/cli/BootstrapInitializer.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/cli/BootstrapInitializer.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/context/InternalActionContext.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/context/InternalActionContext.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/Branch.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/Branch.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/User.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/User.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/relationship/GraphPermission.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/relationship/GraphPermission.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/RootVertex.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/RootVertex.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/SchemaContainerRoot.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/SchemaContainerRoot.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/schema/MicroschemaContainer.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/schema/MicroschemaContainer.java
-    # Child of SchemaCrudHandler.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/schema/handler/SchemaComparator.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/schema/handler/SchemaComparator.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/search/SearchQueue.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/search/SearchQueue.java
-    # Child of SchemaCrudHandler.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/endpoint/handler/AbstractCrudHandler.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/endpoint/handler/AbstractCrudHandler.java
-    # Child of SchemaCrudHandler.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/core/rest/common/GenericMessageResponse.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/core/rest/common/GenericMessageResponse.java
-    # Child of SchemaCrudHandler.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/core/rest/schema/MicronodeFieldSchema.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/core/rest/schema/MicronodeFieldSchema.java
-    # Child of SchemaCrudHandler.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/core/rest/schema/change/impl/SchemaChangesListModel.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/core/rest/schema/change/impl/SchemaChangesListModel.java
-    # Child of SchemaCrudHandler.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/core/rest/schema/impl/SchemaResponse.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/core/rest/schema/impl/SchemaResponse.java
-    # Child of SchemaCrudHandler.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/core/rest/schema/impl/SchemaUpdateRequest.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/core/rest/schema/impl/SchemaUpdateRequest.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/verticle/handler/HandlerUtilities.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/verticle/handler/HandlerUtilities.java
-    # Child of SchemaCrudHandler.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/json/JsonUtil.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/json/JsonUtil.java
-    # Child of SchemaCrudHandler.class
-    - dir: rest-model/target/classes
-      file: com/gentics/mesh/parameter/SchemaUpdateParameters.class
-      sourceDir: rest-model/src/main/java
-      sourceFile: com/gentics/mesh/parameter/SchemaUpdateParameters.java
-    # Child of SchemaCrudHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/util/Tuple.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/util/Tuple.java
-  - target:
     - dir: verticles/graphql/target/classes
       file: com/gentics/mesh/graphql/type/field/MicronodeFieldTypeProvider.class
       sourceDir: verticles/graphql/src/main/java
       sourceFile: com/gentics/mesh/graphql/type/field/MicronodeFieldTypeProvider.java
+    # Child of MicronodeFieldTypeProvider.class
+    - dir: common/target/classes
+      file: com/gentics/mesh/core/data/schema/MicroschemaContainer.class
+      sourceDir: common/src/main/java
+      sourceFile: com/gentics/mesh/core/data/schema/MicroschemaContainer.java
     # Child of MicronodeFieldTypeProvider.class
     - dir: rest-model/target/classes
       file: com/gentics/mesh/core/rest/schema/Microschema.class
@@ -310,21 +295,6 @@ units:
       file: com/gentics/mesh/assertj/impl/MicronodeResponseAssert.class
       sourceDir: test-common/src/main/java
       sourceFile: com/gentics/mesh/assertj/impl/MicronodeResponseAssert.java
-  - target:
-    - dir: core/target/classes
-      file: com/gentics/mesh/auth/MeshBasicAuthLoginHandler.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/auth/MeshBasicAuthLoginHandler.java
-    # Child of MeshBasicAuthLoginHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/auth/provider/MeshJWTAuthProvider.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/auth/provider/MeshJWTAuthProvider.java
-    # Child of MeshBasicAuthLoginHandler.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/context/impl/InternalRoutingActionContextImpl.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/context/impl/InternalRoutingActionContextImpl.java
   - target:
     - dir: verticles/graphql/target/classes
       file: com/gentics/mesh/graphql/type/InterfaceTypeProvider.class
@@ -355,16 +325,6 @@ units:
       file: com/gentics/mesh/graphdb/model/MeshElement.class
       sourceDir: common/src/main/java
       sourceFile: com/gentics/mesh/graphdb/model/MeshElement.java
-  - target:
-    - dir: core/target/classes
-      file: com/gentics/mesh/handler/impl/RangeRequestHandlerImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/handler/impl/RangeRequestHandlerImpl.java
-    # Child of RangeRequestHandlerImpl.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/handler/RangeRequestHandler.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/handler/RangeRequestHandler.java
   - target:
     - dir: rest-model/target/classes
       file: com/gentics/mesh/json/serializer/BasicFieldSerializer.class
@@ -426,92 +386,127 @@ units:
       sourceDir: rest-model/src/main/java
       sourceFile: com/gentics/mesh/core/rest/node/field/impl/StringFieldImpl.java
   - target:
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/root/impl/MeshRootImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/impl/MeshRootImpl.java
-    # Child of MeshRootImpl.class
+    - dir: verticles/graphql/target/classes
+      file: com/gentics/mesh/graphql/GraphQLHandler.class
+      sourceDir: verticles/graphql/src/main/java
+      sourceFile: com/gentics/mesh/graphql/GraphQLHandler.java
+    # Child of GraphQLHandler.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/error/PermissionException.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/error/PermissionException.java
+    # Child of GraphQLHandler.class
     - dir: common/target/classes
-      file: com/gentics/mesh/core/data/binary/BinaryRoot.class
+      file: com/gentics/mesh/graphdb/spi/Database.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/binary/BinaryRoot.java
-    # Child of MeshRootImpl.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/binary/impl/BinaryRootImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/binary/impl/BinaryRootImpl.java
-    # Child of MeshRootImpl.class
+      sourceFile: com/gentics/mesh/graphdb/spi/Database.java
+    # Child of GraphQLHandler.class
+    - dir: verticles/graphql/target/classes
+      file: com/gentics/mesh/graphql/type/QueryTypeProvider.class
+      sourceDir: verticles/graphql/src/main/java
+      sourceFile: com/gentics/mesh/graphql/type/QueryTypeProvider.java
+    # Child of GraphQLHandler.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/graphql/GraphQLError.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/graphql/GraphQLError.java
+  - target:
+    - dir: rest-client/target/classes
+      file: com/gentics/mesh/rest/client/impl/MeshOkHttpReqeuestImpl.class
+      sourceDir: rest-client/src/main/java
+      sourceFile: com/gentics/mesh/rest/client/impl/MeshOkHttpReqeuestImpl.java
+    # Child of MeshOkHttpReqeuestImpl.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/common/GenericMessageResponse.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/common/GenericMessageResponse.java
+    # Child of MeshOkHttpReqeuestImpl.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/json/JsonUtil.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/json/JsonUtil.java
+    # Child of MeshOkHttpReqeuestImpl.class
+    - dir: rest-client/target/classes
+      file: com/gentics/mesh/rest/client/MeshRequest.class
+      sourceDir: rest-client/src/main/java
+      sourceFile: com/gentics/mesh/rest/client/MeshRequest.java
+    # Child of MeshOkHttpReqeuestImpl.class
+    - dir: rest-client/target/classes
+      file: com/gentics/mesh/rest/client/MeshResponse.class
+      sourceDir: rest-client/src/main/java
+      sourceFile: com/gentics/mesh/rest/client/MeshResponse.java
+    # Child of MeshOkHttpReqeuestImpl.class
+    - dir: rest-client/target/classes
+      file: com/gentics/mesh/rest/client/MeshRestClientMessageException.class
+      sourceDir: rest-client/src/main/java
+      sourceFile: com/gentics/mesh/rest/client/MeshRestClientMessageException.java
+  - target:
+    - dir: elasticsearch/target/classes
+      file: com/gentics/mesh/search/impl/SearchClient.class
+      sourceDir: elasticsearch/src/main/java
+      sourceFile: com/gentics/mesh/search/impl/SearchClient.java
+  - target:
+    - dir: test-common/target/classes
+      file: com/gentics/mesh/maven/MavenUtilities.class
+      sourceDir: test-common/src/main/java
+      sourceFile: com/gentics/mesh/maven/MavenUtilities.java
+  - target:
+    - dir: verticles/graphql/target/classes
+      file: com/gentics/mesh/graphql/type/field/FieldDefinitionProvider.class
+      sourceDir: verticles/graphql/src/main/java
+      sourceFile: com/gentics/mesh/graphql/type/field/FieldDefinitionProvider.java
+    # Child of FieldDefinitionProvider.class
+    - dir: api/target/classes
+      file: com/gentics/mesh/Mesh.class
+      sourceDir: api/src/main/java
+      sourceFile: com/gentics/mesh/Mesh.java
+    # Child of FieldDefinitionProvider.class
     - dir: common/target/classes
-      file: com/gentics/mesh/core/data/changelog/ChangelogRoot.class
+      file: com/gentics/mesh/core/link/WebRootLinkReplacer.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/changelog/ChangelogRoot.java
-    # Child of MeshRootImpl.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/changelog/ChangelogRootImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/changelog/ChangelogRootImpl.java
-    # Child of MeshRootImpl.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/generic/MeshVertexImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/generic/MeshVertexImpl.java
-    # Child of MeshRootImpl.class
+      sourceFile: com/gentics/mesh/core/link/WebRootLinkReplacer.java
+    # Child of FieldDefinitionProvider.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/node/field/image/FocalPoint.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/node/field/image/FocalPoint.java
+    # Child of FieldDefinitionProvider.class
+    - dir: verticles/graphql/target/classes
+      file: com/gentics/mesh/graphql/filter/NodeFilter.class
+      sourceDir: verticles/graphql/src/main/java
+      sourceFile: com/gentics/mesh/graphql/filter/NodeFilter.java
+    # Child of FieldDefinitionProvider.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/parameter/LinkType.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/parameter/LinkType.java
+    # Child of FieldDefinitionProvider.class
     - dir: common/target/classes
-      file: com/gentics/mesh/core/data/job/JobRoot.class
+      file: com/gentics/mesh/util/DateUtils.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/job/JobRoot.java
-    # Child of MeshRootImpl.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/core/data/job/impl/JobRootImpl.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/core/data/job/impl/JobRootImpl.java
-    # Child of MeshRootImpl.class
+      sourceFile: com/gentics/mesh/util/DateUtils.java
+  - target:
     - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/GroupRoot.class
+      file: com/gentics/mesh/context/AbstractActionContext.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/GroupRoot.java
-    # Child of MeshRootImpl.class
+      sourceFile: com/gentics/mesh/context/AbstractActionContext.java
+    # Child of AbstractActionContext.class
     - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/LanguageRoot.class
+      file: com/gentics/mesh/core/data/i18n/I18NUtil.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/LanguageRoot.java
-    # Child of MeshRootImpl.class
+      sourceFile: com/gentics/mesh/core/data/i18n/I18NUtil.java
+    # Child of AbstractActionContext.class
+    - dir: rest-model/target/classes
+      file: com/gentics/mesh/core/rest/error/GenericRestException.class
+      sourceDir: rest-model/src/main/java
+      sourceFile: com/gentics/mesh/core/rest/error/GenericRestException.java
+    # Child of AbstractActionContext.class
     - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/MicroschemaContainerRoot.class
+      file: com/gentics/mesh/handler/ActionContext.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/MicroschemaContainerRoot.java
-    # Child of MeshRootImpl.class
+      sourceFile: com/gentics/mesh/handler/ActionContext.java
+    # Child of AbstractActionContext.class
     - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/NodeRoot.class
+      file: com/gentics/mesh/util/HttpQueryUtils.class
       sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/NodeRoot.java
-    # Child of MeshRootImpl.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/ProjectRoot.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/ProjectRoot.java
-    # Child of MeshRootImpl.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/RoleRoot.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/RoleRoot.java
-    # Child of MeshRootImpl.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/TagFamilyRoot.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/TagFamilyRoot.java
-    # Child of MeshRootImpl.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/TagRoot.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/TagRoot.java
-    # Child of MeshRootImpl.class
-    - dir: common/target/classes
-      file: com/gentics/mesh/core/data/root/UserRoot.class
-      sourceDir: common/src/main/java
-      sourceFile: com/gentics/mesh/core/data/root/UserRoot.java
-    # Child of MeshRootImpl.class
-    - dir: core/target/classes
-      file: com/gentics/mesh/dagger/MeshInternal.class
-      sourceDir: core/src/main/java
-      sourceFile: com/gentics/mesh/dagger/MeshInternal.java
+      sourceFile: com/gentics/mesh/util/HttpQueryUtils.java
